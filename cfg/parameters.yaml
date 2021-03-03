@@ -1,0 +1,21 @@
+# parameters.yaml is the root yaml file, don't delete it
+
+General:
+  include: general.yaml
+
+LidarRegitraInit:
+  use_default: false # set to true if no lidar_registra_init.yaml is included, then default config will be used.
+  include: lidar_registra_init.yaml # configuration of the Lidar registration process at initialization stage
+  
+RSLocalization:
+  name: RSLocalization
+  # each observer corresponds to a sensor used in multi-sensor fusion
+  Observers: 
+    - include: Observer/LidarEsObserver.yaml
+
+
+MapServer: 
+  include: map_server.yaml
+
+RvizDisplay:
+  include: rviz_display.yaml

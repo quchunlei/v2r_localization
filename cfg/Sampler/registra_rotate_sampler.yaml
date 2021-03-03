@@ -1,0 +1,4 @@
+name: ICPRotateSampler
+transform_map: false
+num_of_rotate: 16
+rotate_delta: 0

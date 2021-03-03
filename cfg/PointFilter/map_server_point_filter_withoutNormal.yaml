@@ -1,0 +1,8 @@
+- RemoveNaNDataPointsFilter
+
+- OctreeGridDataPointsFilter:
+    buildParallel: 1
+    maxPointByNode: 1
+    maxSizeByNode: 1 
+    samplingMethod: 3
+  

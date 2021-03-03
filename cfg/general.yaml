@@ -1,0 +1,9 @@
+# yaml
+frame_id: rs_odom # the name of the fixed frame 
+child_frame_id: base_link2 # the name of the local frame, whose origin is assumed to be at the kinematic center of the car and x axis is along the forward direction 
+# Topics of subscribed sensors
+sub_point_cloud_topic: /middle/rslidar_points
+# Topics published by rs_localization
+pub_rate: 2 # Unit: Hz, the rate at which topics are published. Unable to publish faster than the highest sensor rate, 
+pub_pose_topic: /rs_pose # topic of localization result in type of nav_msgs::Odometry
+pub_point_cloud_topic: /rslidar_points_global # topic of current Lidar data in local frame 

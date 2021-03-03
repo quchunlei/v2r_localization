@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg ="lidar_pose_localization" name="lidar_pose_localization" type="lidar_pose_localization" output="screen"/>
+  <node pkg="rviz" type="rviz" name="rviz" respawn="false" args="-d $(find lidar_pose_localization)/rviz/demo.rviz"/>
+</launch>
+
+
+

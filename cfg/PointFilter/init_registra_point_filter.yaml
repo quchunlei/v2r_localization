@@ -1,0 +1,25 @@
+- RemoveNaNDataPointsFilter
+
+# - MaxPointCountDataPointsFilter:
+#   seed: 4819354
+#   maxCount: 50000
+
+- OctreeGridDataPointsFilter:
+    buildParallel: 1
+    maxPointByNode: 1
+    maxSizeByNode: 3
+    samplingMethod: 3
+  
+# - SurfaceNormalDataPointsFilter:
+#     knn: 8
+#     maxDist: 2
+#     epsilon: 0.1
+#     keepNormals: 1
+#     keepDensities: 0
+#     keepEigenValues: 0
+#     keepEigenVectors: 0
+#     smoothNormals: 1
+
+# - NormalSpaceDataPointsFilter:
+#   nbSample: 5000
+#   seed: 5345678

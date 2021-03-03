@@ -1,0 +1,7 @@
+# yaml
+name: OdomObserver # observer must specify a predefined name
+type: Correction # observer type: Prediction or Correction
+
+vel_noise: 0.012
+use_global_vel: false
+odom_failure_threshold: 50.0 # unit: sec

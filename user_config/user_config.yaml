@@ -1,0 +1,16 @@
+# yaml
+General:
+  # Topics of subscribed sensors
+  sub_point_cloud_topic: /rslidar_points
+  sub_init_pose_topic: /initialpose
+
+  # Topics published by rs_localization
+  pub_rate: 5 # Unit: Hz, the rate at which topics are published. Unable to publish faster than the highest sensor rate, 
+  pub_pose_topic: /rs_pose # topic of localization result in type of nav_msgs::Odometry, it's updated by latest sensor data available
+  pub_point_cloud_topic: /rslidar_points_global # topic of current Lidar data in local frame 
+  pub_background_map_topic: /rs_map
+
+MapServer: 
+  # map_file: /home/data/mapping_data/test_new_map/20200907/map_generate_1/final_map.pcd
+  map_file: /home/qcl/Downloads/map_gyy_no_d.pcd
+  display_definition: 10 # from 1 to 10, meaning 10%, 20% , ..., 100%

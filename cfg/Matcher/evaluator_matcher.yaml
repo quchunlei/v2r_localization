@@ -1,0 +1,38 @@
+name: MeanDistEvaluator
+
+matcher:
+  name: KDTreeMatcher
+  knn: 1
+  maxDist: 100.0
+  epsilon: 0.1
+
+outlierFilters:
+  - 
+    name: TrimmedDistOutlierFilter
+    ratio: 0.85
+
+  # -
+  #   name: SurfaceNormalOutlierFilter
+  #   maxAngle: 0.6
+
+errorMinimizer:
+  name: PointToPlaneWithCovErrorMinimizer
+  #force2D: 1
+
+transformationCheckers:
+  -
+    name: DifferentialTransformationChecker
+    minDiffRotErr: 0.001
+    minDiffTransErr: 0.01
+    smoothLength: 5
+  -
+    name: CounterTransformationChecker
+    maxIterationCount: 20
+
+  - 
+    name: BoundTransformationChecker
+    maxRotationNorm: 0.4
+    maxTranslationNorm: 10.0
+
+inspector:
+  name: NullInspector

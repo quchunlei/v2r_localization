@@ -1,0 +1,20 @@
+# yaml
+name: LidarRegitraInit
+
+point_filter:
+  name: CustomPointFilter
+  use_default: false
+  filter_chain:
+    include: PointFilter/init_registra_point_filter.yaml
+
+sampler: 
+  include: Sampler/registra_trans_rotated_sampler.yaml
+ 
+pre_matcher: 
+  name: NullPreMatcher
+
+matcher: 
+  include: Matcher/init_matcher.yaml
+ 
+evaluator: 
+  include: Matcher/evaluator_matcher.yaml

@@ -1,0 +1,14 @@
+# yaml
+name: LidarRegistraObserver # observer must specify a predefined name
+type: Correction # observer type: Prediction or Correction
+
+heading_position_noise: 0.3 # Lidar position measurement noise along forward direction
+side_position_noise: 0.1 # Lidar position measurement noise orthogonal to forward direction
+angle_noise: 0.02 # Lidar orientation(2D) measurement noise
+
+lidare_failure_threshold: 5.0 # Unit: sec
+
+registration_process: # configuration of the Lidar registration process
+  include: lidar_registra_regular.yaml
+
+

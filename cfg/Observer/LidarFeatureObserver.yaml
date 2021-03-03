@@ -1,0 +1,50 @@
+# yaml
+name: LidarFeatureObserver # observer must specify a predefined name
+type: Correction # observer type: Prediction or Correction
+
+dist_lidar_to_ground: 2
+heading_position_noise: 1 # Lidar position measurement noise along forward direction
+side_position_noise: 1 # Lidar position measurement noise orthogonal to forward direction
+angle_noise: 1000 # Lidar orientation(2D) measurement noise
+lidar_failure_threshold: 5
+
+feature_extraction:
+  t_of_ground_seg: 0.4  #m
+  num_of_iteration_seg: 40
+  t_angle_of_z_axis: 15.0  #deg
+  t_radius_of_tree: 0.4   #m
+  t_scale_of_tree_point_number: 0.8
+  t_height_of_tree_z: 1.0  # height threshold of a tree
+  t_bottom_of_tree: 0 # if object is tree, it's min z should small than the value
+  t_max_z: 1.0  #the max z to filter point cloud
+  t_point_num_of_tree: 10
+  start_to_ground: 0.3
+  show_message: false
+  show_pointcloud: false
+
+  x_min: 0
+  x_max: 60
+  y_min: -30
+  y_max: 30
+  grid_size: 0.1875 #=60/320
+  scan_range: 1
+  cluster_z: 1.5
+  enable_growth: false
+  growth_z: 3.0
+  growth_step: 0.25
+
+feature_localization:
+  t_least_num_of_poles: 4
+  t_radius_kdsearch: 40
+  t_assign_distance_max: 1.0
+  t_least_point_num: 4
+  scale_of_filter_cur: 0.2 
+  t_dis_of_merge_tree: 1.5
+  num_of_theta_stored: 3
+  t_theta_std_ratio: 3.0
+  t_theta_change_max: 2.0
+  t_theta_change_min: 1.0 
+  t_update_theta_pre_count: 2
+  show_message: false
+
+

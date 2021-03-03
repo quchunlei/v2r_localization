@@ -1,0 +1,11 @@
+# yaml
+num_gps_path_reserve: 100000
+cylinder_radius: 0.5 # unused in this version
+cylinder_length: 1  # unused in this version
+cylinder_position_z: 0 # unused in this version
+map_cylinder_color_r: 1 # unused in this version
+map_cylinder_color_g: 0 # unused in this version
+map_cylinder_color_b: 0 # unused in this version
+instant_cylinder_color_r: 0 # unused in this version
+instant_cylinder_color_g: 1 # unused in this version
+instant_cylinder_color_b: 0 # unused in this version

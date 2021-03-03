@@ -1,0 +1,14 @@
+# yaml
+debug: false # set to true to print some debug infomation
+height_search_radius: 100.0 # radius of searching in map for average height
+map_cell_length: 10.0 # side length of each square cell for map segmentation 
+local_map_radius: 120.0 # Unit: m
+t_dis_update_localmap: 10.0 # distance threshold for re-load local map
+display_definition: 1 # from 1 to 10, meaning 10%, 20% , ..., 100%
+lidar_height_from_ground: 0
+
+# define map filtering process 
+filter_chain:
+  # include: PointFilter/map_server_point_filter.yaml
+  include: PointFilter/map_server_point_filter_withoutNormal.yaml
+  

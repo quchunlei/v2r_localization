@@ -1,0 +1,23 @@
+- RemoveNaNDataPointsFilter
+
+- OctreeGridDataPointsFilter:
+    buildParallel: 1
+    maxPointByNode: 1
+    maxSizeByNode: 0.2
+    samplingMethod: 3
+  
+- SurfaceNormalDataPointsFilter:
+    knn: 8
+    maxDist: 2
+    epsilon: 0
+    keepNormals: 1
+    keepDensities: 0
+    keepEigenValues: 0
+    keepEigenVectors: 0
+    smoothNormals: 1
+
+- OctreeGridDataPointsFilter:
+    buildParallel: 1
+    maxPointByNode: 1
+    maxSizeByNode: 1
+    samplingMethod: 3

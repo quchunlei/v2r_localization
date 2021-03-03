@@ -1,0 +1,14 @@
+# yaml
+name: ImuOdomObserver # observer must specify a predefined name
+type: Prediction # observer type: Prediction or Correction
+
+linear_velocity_noise: 0.02 # set linear vel covariance of a observation
+angular_velocity_noise: 0.002 # set angular velocity covariance of a observation
+
+imu_period: 0.1 # nominal period of imu, calculated by 1/nominal_imu_rate
+odom_period: 0.1 # nominal period of velocity message, calculated by 1/nominal_vel_rate
+odom_bias: 1.0 # the ratio of true velocity over measured velocity
+
+imu_failure_threshold: 5.0 # unit: sec
+odom_failure_threshold: 3.0 # unit: sec
+
